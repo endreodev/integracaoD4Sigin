@@ -1,0 +1,98 @@
+{
+    "packages": [
+        {
+            "name": "d4sign/d4sign-php",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/d4sign/d4sign-php",
+                "reference": "e225253e16361b3f254beec37d0e87c539fe24e3"
+            },
+            "require": {
+                "php": ">=5.5.0"
+            },
+            "time": "2021-10-05T15:45:59+00:00",
+            "default-branch": true,
+            "type": "package",
+            "installation-source": "source",
+            "autoload": {
+                "psr-4": {
+                    "D4sign\\": "sdk/src/D4sign/"
+                }
+            },
+            "keywords": [
+                "api",
+                "d4sign",
+                "sdk"
+            ],
+            "install-path": "../d4sign/d4sign-php"
+        },
+        {
+            "name": "telegram-bot/api",
+            "version": "3.1.0.x-dev",
+            "version_normalized": "3.1.0.9999999-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TelegramBot/Api.git",
+                "reference": "ef970c11fa35f46c842bdbb8a348cb42f00ed72d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TelegramBot/Api/zipball/ef970c11fa35f46c842bdbb8a348cb42f00ed72d",
+                "reference": "ef970c11fa35f46c842bdbb8a348cb42f00ed72d",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": ">=7.4"
+            },
+            "require-dev": {
+                "codeception/codeception": "*",
+                "phpunit/phpunit": "^9.0",
+                "squizlabs/php_codesniffer": "2.*"
+            },
+            "time": "2021-03-09T07:01:18+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "TelegramBot\\Api\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ilya Gusev",
+                    "email": "mail@igusev.ru",
+                    "homepage": "https://php-cat.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP Wrapper for Telegram Bot API",
+            "homepage": "https://github.com/TelegramBot/Api",
+            "keywords": [
+                "bot",
+                "bot api",
+                "php",
+                "telegram"
+            ],
+            "support": {
+                "issues": "https://github.com/TelegramBot/Api/issues",
+                "source": "https://github.com/TelegramBot/Api/tree/3.1.0"
+            },
+            "install-path": "../telegram-bot/api"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": []
+}

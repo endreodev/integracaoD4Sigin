@@ -1,0 +1,30 @@
+{
+    "name": "vendor/app",
+    "description": "Integração com D4Signin",
+    "license": "mit",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        },
+        "files": [
+            "src/config.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "endreodev",
+            "email": "endreo.dev@gmail.com"
+        }
+    ],
+    "require": {
+        "d4sign/d4sign-php": "dev-master",
+        "telegram-bot/api": "3.1.0.x-dev"
+    },
+    "minimum-stability": "dev",
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/d4sign/d4sign-php"
+        }
+    ]
+}
