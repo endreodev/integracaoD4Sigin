@@ -27,7 +27,7 @@ const DATA_D4SIGN_CONFIG = [
 > start api bot
 > acesse a pagina 
 // https://api.telegram.org/bot{tokenTelegran}/getUpdates
-// vai mostrar as mensagens ai 6453296194:AAFqSiqS1Sotk1_bUg91Jnwe3gA5i2WzCW4
-// https://api.telegram.org/bot6453296194:AAFqSiqS1Sotk1_bUg91Jnwe3gA5i2WzCW4/getUpdates
+// vai mostrar as mensagens ai 6453296194:asdsadasd
+// https://api.telegram.org/bot6453296194:asdasdasd/getUpdates
 
 Copie o id da conversa 
