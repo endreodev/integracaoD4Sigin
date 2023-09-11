@@ -1,7 +1,7 @@
 <?php 
 
 	// inclua antes do código que utilizará o SDK
-	require_once(__DIR__ . '../vendor/autoload.php');
+	require_once(__DIR__ . '/vendor/autoload.php');
 
 	use App\Comunication\Alert;
 
