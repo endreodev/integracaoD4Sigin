@@ -22,7 +22,7 @@
 		die("O diretório não existe.");
 
 	}else{
-		echo "<h3>Diretório encontrado Prosseguir.</h3><br>";
+		echo "Diretório encontrado Prosseguir".PHP_EOL;
 	}
 
 	// Lista todos os arquivos e diretórios
@@ -34,54 +34,54 @@
 		return pathinfo($file, PATHINFO_EXTENSION) === 'pdf';
 	});
 	
-	$MSGTELEGRAN .= "<p>Carregou arquivos.</p><br>";
-	echo "<p>Carregou arquivos... ".count($pdfFiles)."</p><br>";
+	$MSGTELEGRAN .= "Carregou arquivos.".PHP_EOL;
+	echo "Carregou arquivos... ".count($pdfFiles)."".PHP_EOL;
 
 	foreach ($pdfFiles as $file) {
 
 		$filePath = $directory . '/' . $file;
 
-		$MSGTELEGRAN .= "<p>Processando aquivo ".$filePath."</p><br>";
-		echo "<p>Processando aquivo ".$filePath."</p><br>";
+		$MSGTELEGRAN .= "Processando aquivo ".$filePath."".PHP_EOL;
+		echo "Processando aquivo ".$filePath."".PHP_EOL;
 
 		// Verifica se é um arquivo PDF
 		if (is_file($filePath) && pathinfo($file, PATHINFO_EXTENSION) === 'pdf') {
 
 			// Coloque aqui o código para processar o arquivo PDF
-			$MSGTELEGRAN .= "Arquivo PDF encontrado: $file ". PHP_EOL."<br>";
-			echo "Arquivo PDF encontrado: $file ". PHP_EOL."<br>";
+			$MSGTELEGRAN .= "Arquivo PDF encontrado: $file ". PHP_EOL;
+			echo "Arquivo PDF encontrado: $file ". PHP_EOL;
 
 			//Retorna o email e telefone 
 			$Signature = (new \App\Services\FileDocuments())->extrairTelefoneEmail($file);
 
 			//Envia documento e retorna id gerado no D4Sign 
 			if($D4SignAPI->uploadFile($filePath,$file)){
-				$MSGTELEGRAN .= "Sucesso no envio de documento para D4Sigin!". PHP_EOL."<br>";
-				echo "Sucesso no envio de documento para D4Sigin!". PHP_EOL."<br>";
+				$MSGTELEGRAN .= "Sucesso no envio de documento para D4Sigin!". PHP_EOL;
+				echo "Sucesso no envio de documento para D4Sigin!". PHP_EOL;
 
 				$D4SignAPI->createSignatureList($Signature['email'],$Signature['telefone']);
-				$MSGTELEGRAN .= "Criou Signatario para o documento!". PHP_EOL."<br>";
-				echo "Criou Signatario para o documento!". PHP_EOL."<br>";
+				$MSGTELEGRAN .= "Criou Signatario para o documento!". PHP_EOL;
+				echo "Criou Signatario para o documento!". PHP_EOL;
 
 				$D4SignAPI->solicitaEnviodeDocumento();
-				$MSGTELEGRAN .= "Solicitou o envio de documento para documento!". PHP_EOL."<br>";
-				echo "Solicitou o envio de documento para documento!". PHP_EOL."<br>";
+				$MSGTELEGRAN .= "Solicitou o envio de documento para documento!". PHP_EOL;
+				echo "Solicitou o envio de documento para documento!". PHP_EOL;
 
 			}else{
 				
-				$MSGTELEGRAN .= "Erro no envio de documento para D4Sigin!". PHP_EOL."<br>";
-				echo "Erro no envio de documento para D4Sigin!". PHP_EOL."<br>";
+				$MSGTELEGRAN .= "Erro no envio de documento para D4Sigin!". PHP_EOL;
+				echo "Erro no envio de documento para D4Sigin!". PHP_EOL;
 			}
 			
 			if (rename($filePath, "executados/" . $file)) {
 				
-				$MSGTELEGRAN .= "Arquivo movido com sucesso!". PHP_EOL."<br>";
-				echo "Arquivo movido com sucesso!". PHP_EOL."<br>";
+				$MSGTELEGRAN .= "Arquivo movido com sucesso!". PHP_EOL;
+				echo "Arquivo movido com sucesso!". PHP_EOL;
 				
 			} else {
 				
-				$MSGTELEGRAN .= "Não foi possível mover o arquivo.". PHP_EOL."<br>";
-				echo "Não foi possível mover o arquivo.". PHP_EOL."<br>";
+				$MSGTELEGRAN .= "Não foi possível mover o arquivo.". PHP_EOL;
+				echo "Não foi possível mover o arquivo.". PHP_EOL;
 			}
 
 			Alert::sendMessage($MSGTELEGRAN);
@@ -89,7 +89,7 @@
 		}
 	}
 
-	echo "<br><h3>Processo executado!</h3>";
+	echo "Processo executado!". PHP_EOL;
 
 
 	
