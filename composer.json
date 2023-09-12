@@ -7,7 +7,7 @@
             "App\\": "src/"
         },
         "files": [
-            "config.php"
+            "/var/www/integracaod4sigin/src/config.php"
         ]
     },
     "authors": [
