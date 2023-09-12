@@ -1,6 +1,6 @@
 <?php
 // inclua antes do código que utilizará o SDK
-require_once('./vendor/autoload.php');
+// require_once('./vendor/autoload.php');
 ?>
 
 <!DOCTYPE html>
