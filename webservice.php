@@ -34,6 +34,8 @@
 		return pathinfo($file, PATHINFO_EXTENSION) === 'pdf';
 	});
 	
+	$MSGTELEGRAN = "";
+
 	$MSGTELEGRAN .= "Carregou arquivos.".PHP_EOL;
 	echo "Carregou arquivos... ".count($pdfFiles)."".PHP_EOL;
 
