@@ -6,5 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'a5f891d8a60068980dd5f0e9ad38b815' => '/var/www/integracaod4sigin/src/config.php',
+    'fbd12a093beab85c8e92b2a7efe1a352' => $baseDir . '/src/config.php',
 );
