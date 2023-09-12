@@ -1,6 +1,6 @@
 <?php
 // inclua antes do código que utilizará o SDK
-require_once(__DIR__ . '/vendor/autoload.php');
+require_once('./vendor/autoload.php');
 ?>
 
 <!DOCTYPE html>
@@ -13,6 +13,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 <body>
     <div class="container">
         <div class="row">
+            <br><br><br><br>
             <div class="col s12 m6 offset-m3">
                 <!-- O card centralizado -->
                 <div class="card">
@@ -21,6 +22,33 @@ require_once(__DIR__ . '/vendor/autoload.php');
                         <p>Sistema de integração com D4Sigin.</p>
                     </div>
                 </div>
+
+                <div class="card-panel grey lighten-5 z-depth-1">
+                    <div class="row valign-wrapper">
+                        <div class="col s6">
+                            <img src="images/fenix.png" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                        </div>
+                        <div class="col s6">
+                            <span class="black-text">
+                                Fenix DTVM.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-panel grey lighten-5 z-depth-1">
+                    <div class="row valign-wrapper">
+                        <div class="col s6">
+                            <img src="images/d4sigin.png" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                        </div>
+                        <div class="col s6">
+                            <span class="black-text">
+                                D4Sigin Assinatura Eletronica.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
